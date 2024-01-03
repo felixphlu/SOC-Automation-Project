@@ -24,4 +24,8 @@ Shuffle will then send an email to us (the SOC analyst) with details about the a
 
 
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>Shuffle workflow</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>Shuffle workflow</p></figcaption></figure>
+
+
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
