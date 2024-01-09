@@ -66,9 +66,16 @@ Now that VirusTotal OSINT is set up correctly, I want to setup an alert for it w
 
 After running Mimikatz on the machine, the SOC analyst user felux was alerted.
 
-To setup SOAR automation so that it sends emails to the SOC Analyst to alert them when it detects malicious executables like Mimikatz, I open port 9000 on the cloud providers firewall to allow any SOARs to have access to our machines
+<figure><img src=".gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
+To setup SOAR automation so that it sends emails to the SOC Analyst to alert them when it detects malicious executables like Mimikatz, I had opened port 9000 on the cloud providers firewall to allow any SOARs to have access to our machines.
+
+<figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+
+On Shuffle, I connect the email now as well to have emails sent to the analyst. I will set it up with disposable email platform SquareX. I receive the following email with the alert:
 
 <figure><img src=".gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
-
