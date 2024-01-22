@@ -22,17 +22,17 @@ I will use DigitalOcean cloud provider to store TheHive and Wazuh. I have config
 
 <figure><img src=".gitbook/assets/FirewallRUles.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The firewall is configured to block all traffic except for my public IP address which I have hidden along with traffic from ports 9000 that is used to connect to TheHive and 55000.
 
-<figure><img src=".gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Shuffle workflow</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Shuffle workflow</p></figcaption></figure>
 
 This is the workflow on Shuffle that connects everything together. I will have the alert sent to Shuffle, Shuffle will receive the alert and extract the SHA256 Hash from the file. It will then check the reputation score with VirusTotal with the hash. Then, it will send the details to TheHive to create an alert. Finally, it will generate an email to the SOC Analyst to begin the investigation.
 
 To have the received alert in Shuffle checked on VirusTotal in order to enrich the indicators of compromise (IOCs), I need to create a regex that will extract the SHA256 Hash out of the alert.
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Specifically, I want to extract the SHA256 hash and parse it into the VirusTotal search to get the reputation score. I will use the following regular expression (regex):
 
@@ -62,7 +62,7 @@ The highlighted malicious attribute shows 61 which matches when I search for Mim
 
 Now that VirusTotal OSINT is set up correctly, I want to setup an alert for it when it detects something malicious. I first setup TheHive with users and a service account. In a real world environment, I would setup the users to have permissions with the principle of least privilege in mind and tie that to the accounts where they are given the minimum level of permission to perform its function. In this case, the service account will also be set to analyst as this is a demo environment.
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>I created a service account SOAR and a SOC analyst user account felux</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption><p>I created a service account SOAR and a SOC analyst user account felux</p></figcaption></figure>
 
 After running Mimikatz on the machine, the SOC analyst user felux was alerted.
 
@@ -79,3 +79,11 @@ To setup SOAR automation so that it sends emails to the SOC Analyst to alert the
 On Shuffle, I connect the email now as well to have emails sent to the analyst. I will set it up with disposable email platform SquareX. I receive the following email with the alert:
 
 <figure><img src=".gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+
+
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
