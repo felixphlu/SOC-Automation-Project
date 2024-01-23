@@ -79,11 +79,3 @@ To setup SOAR automation so that it sends emails to the SOC Analyst to alert the
 On Shuffle, I connect the email now as well to have emails sent to the analyst. I will set it up with disposable email platform SquareX. I receive the following email with the alert:
 
 <figure><img src=".gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
-
-
-
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
